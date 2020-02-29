@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Tab Notes",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tab-notes@nishit",
+      "strict_min_version": "42.0"
+    }
+  },
+  "version": "0.1.0",
+  "author": "Nishit",
+  "description": "Allow you to write anything in new tab",
+  "permissions": ["storage"],
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+
+  "browser_action": {
+    "browser_style": true,
+    "default_title": "Tab notes",
+    "default_popup": "newtab.html"
+  },
+
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Y"
+      }
+    }
+  }
+}
