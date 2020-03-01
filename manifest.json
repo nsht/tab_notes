@@ -3,13 +3,16 @@
   "name": "Tab Notes",
   "browser_specific_settings": {
     "gecko": {
-      "id": "tab-notes@nishit",
+      "id": "tab-notes@ryux",
       "strict_min_version": "42.0"
     }
   },
   "version": "0.1.0",
   "author": "Nishit",
-  "description": "Allow you to write anything in new tab",
+  "icons": {
+    "48": "icon48.png"
+  },
+  "description": "Allow you to take notes in the new tab page",
   "permissions": ["storage"],
   "chrome_url_overrides": {
     "newtab": "newtab.html"

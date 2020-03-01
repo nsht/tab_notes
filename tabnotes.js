@@ -5,7 +5,6 @@ browser.tabs.onActivated.addListener(tabOpen);
 browser.windows.onFocusChanged.addListener(tabOpen);
 
 function logKey(e) {
-  console.log("Textarea Change");
   clearTimeout(timeoutId);
   timeoutId = setTimeout(function() {
     // Runs 1 second (1000 ms) after the last change
@@ -20,14 +19,13 @@ function saveToDB() {
 }
 
 function tabOpen(tab) {
-  console.log("tab open");
   browser.storage.sync.get("tab_note").then(result => {
-    console.log(result);
-    document.querySelector("#notes").value = result.tab_note;
+    if (typeof result !== "undefined") {
+      document.querySelector("#notes").value = result.tab_note;
+    }
   });
 }
 
-
-window.addEventListener('load', () => {
-    tabOpen()
-  })
+window.addEventListener("load", () => {
+  tabOpen();
+});
