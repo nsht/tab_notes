@@ -20,7 +20,7 @@ function saveToDB() {
 
 function tabOpen(tab) {
   browser.storage.sync.get("tab_note").then(result => {
-    if (typeof result !== "undefined") {
+    if (typeof result.tab_note !== "undefined") {
       document.querySelector("#notes").value = result.tab_note;
     }
   });
