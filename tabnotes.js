@@ -9,7 +9,7 @@ function logKey(e) {
   timeoutId = setTimeout(function() {
     // Runs 1 second (1000 ms) after the last change
     saveToDB();
-  }, 1000);
+  }, 10);
 }
 
 function saveToDB() {
